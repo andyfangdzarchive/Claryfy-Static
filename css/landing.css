@@ -1,0 +1,38 @@
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+body {
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
+}
+html, body {
+        height: 100%;
+        margin: 0px;
+    }
+.landing-logo {
+	max-width:100%;
+max-height:100%;
+}
+
+.full-page {
+	display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.card-title {
+	color:black !important;
+}
+
+.switch {
+	float:left;
+	display: inline-block;
+}
+
+.chkbox {
+	margin-top: 0px;margin-bottom: 0px;float:left;position: relative; top:-2px;
+}

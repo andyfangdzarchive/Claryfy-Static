@@ -10,6 +10,10 @@
   padding: 0 15px;
 }
 
+.li-action {
+  width:100%;
+}
+
 .banner {
   margin-top:10px;
   height:56px;
