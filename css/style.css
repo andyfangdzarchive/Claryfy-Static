@@ -10,6 +10,10 @@
   padding: 0 15px;
 }
 
+.banner {
+  margin-top:10px;
+  height:56px;
+}
 .schoolbadge {
 	font-weight: 300;
   font-size: 0.75rem !important;
@@ -28,7 +32,7 @@
 	font-weight: 300;
   font-size: 0.8rem;
   color: #fff;
-  background-color: #26a69a;
+  background-color: rgb(97, 107, 103);
   -webkit-border-radius: 2px;position: absolute;
   color: white !important;
   -moz-border-radius: 2px;
