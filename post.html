@@ -4,63 +4,162 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <link rel="apple-touch-icon" href="/img/touch-icon.png">
   <title>Claryfy</title>
 
   <!-- CSS  -->
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/normalize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="grey">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Claryfy</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="search.html"><i class="mdi-action-search"></i></a></li>
-      </ul>
-
-      
-      <ul id="nav-mobile" class="side-nav" style="">
-        <li class="logo"><a class="logo-container" href="profile.html" class="brand-logo"><i class="mdi-action-assessment circle green" style="font-size: 5rem;
-  color: white;"></i></a></li>
+  <div class="navbar-fixed">
+    <nav class="grey">
+      <div class="nav-wrapper ">
+        <div id="mainSearch">
+          <a href="/" class="brand-logo center"><img class="banner" src="img/banner.png"/></a>
+          <ul class="right">
+            <li><a href="javascript:void(0);" onclick="useSearch();" class="waves-effect waves-light"><i class="mdi-action-search"></i></a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large" style="margin-left: 20px;"><img src="img/5.png" class="mdi-action-assessment avatar-bar circle green" ></img></a></a>
+        </div>
+        <form id="subSearch" style="display: none">
+          <div class="input-field">
+            <input id="search" type="text" style="padding-left: 30px;" placeholder="Search..." required>
+            <label style="height: 100%;" for="search" onclick="disableSearch()" class="waves-effect waves-light"><i class="mdi-navigation-arrow-back"></i></label>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </div>
+  <nav style="height: 0px;">
+    <ul id="nav-mobile" class="side-nav" style="">
+      <li class="logo"><a class="logo-container" href="profile-private.html" class="brand-logo"><img src="img/5.png" class="mdi-action-assessment avatar-nav circle green" ></img></a></li>
       <li class="alias"><p style="text-align: center;">SomeAlias<br><span class="badge aliasbadge" style="left: 40%;">NDHS</span><br></p>
       </li>
-        <li class="bold"><a href="/" class="waves-effect waves-teal">Home</a></li>
-        <li class="bold"><a href="tags.html" class="waves-effect waves-teal">Tags</a></li>
-        <li class="bold"><a href="logout.html" class="waves-effect waves-teal">Logout</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-action-assessment circle"></i></a>
-      <form style="display: none">
-        <div class="input-field">
-          <input id="search" type="text" placeholder="Search..." required>
-          <label for="search"><i class="mdi-navigation-arrow-back"></i></label>
-        </div>
-      </form>
-    </div>
+      <li class="bold"><a href="/" class="li-action waves-effect waves-teal">Home</a></li>
+      <li class="bold"><a href="" class="li-action waves-effect waves-teal">Tags</a></li>
+      <li class="bold"><a href="landing.html" class="li-action waves-effect waves-teal">Logout</a></li>
+    </ul>
   </nav>
   <div class="fixed-action-btn " style="bottom: 25px; right: 24px;">
-    <a class="btn-floating btn-large red waves-effect waves-circle waves-light ">
-      <i class="large mdi-editor-mode-edit "></i>
+    <a class="btn-floating btn-large orange waves-effect waves-circle waves-light " href="#reply-form" >
+      <i class="large mdi-content-reply "></i>
     </a>
   </div>
-  <div class="">
+  
+  <div class="section light-grey">
+    <div class="row">
+     <div class="col s12 m6 offset-m3">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title black-text flow-text">Which campus has the most number of Krispy Kremes nearby?</span><br>
+          <div class="card" style="float:left; margin-bottom:0px; margin-right:5px; ">
+            <div class="card-content" style="padding: 10px;">
+              <div class="row" style="margin-bottom:0px;">
+                <div class="col">
+                  <a href="profile-public.html" style="margin-right:0px;">
+                    <img src="img/5.png" class="avatar circle">
+                  </a>
+                </div>
+                <div class="col">
+                  <span><a href="profile-public.html" id="link-alias">
+                    SomeAlias</a></span><br><span class="badge cardbadge">NDHS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p style="">Lorem ipsum dolor sit amet, nunc turpis mattis vestibulum nulla mauris. Mauris eget egestas. Porta mattis orci, nec orci, lectus condimentum. In tincidunt amet volutpat aenean magnis cras, quisque pretium est a ante, nec aliquam diam id elit ut, eget lacus aenean lectus hac massa. Iaculis aenean posuere dolor molestie a, libero vehicula augue sed necessitatibus elit, pellentesque consectetuer et, eros donec hac sit. Nulla congue cum, nam scelerisque, nulla a risus quis ut suspendisse, erat a felis eu. In tempus dolor amet est sagittis est, do blandit.</p>
+          </div>
+          <div class="card-action">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="col s4 m2" style="padding-left: 0px;"><a href="#!" class="btn waves-effect white black-text" style="margin:0;"><i class="fa fa-thumbs-up">3</i></a>
+              </div>
+              <div class="col s4 m2" style="float:right;"><a href="#reply-form" class="btn waves-effect white black-text" style="margin:0;"><i class="fa fa-comments">3</i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+       <div class="col s12 m6 offset-m3">
+        <div class="card grey lighten-3">
+          <div class="card-content">
+            <div style="margin-bottom:10px;"><img src="img/5.png" class="avatar circle" style="width:30px; height:30px; margin-right:10px; "><span class="badge cardbadge">NDHS</span></div>
+            <p style="text-align: justify">Lorem ipsum dolor sit amet, nunc turpis mattis vestibulum nulla mauris. Mauris eget egestas. Porta mattis orci, nec orci, lectus condimentum.</p>
+          </div>
+          <div class="card-action">
+            <a href="#!" class="btn waves-effect white black-text" style="margin:0;"><i class="fa fa-thumbs-up">3</i></a><a href="#!" class="btn waves-effect white black-text" style="margin:0; margin-left:15px;"><i class="mdi-content-reply"></i></a>
+          </div>
+        </div>
+      </div>
 
-    <div class="section">
-  </div>
+      <div class="row">
+       <div class="col s12 m6 offset-m3">
+        <div class="card orange lighten-4">
+          <div class="card-content">
+            <div style="margin-bottom:10px;"><img src="img/3.png" class="avatar circle" style="width:30px; height:30px; margin-right:10px; "><span class="badge cardbadge">BJHS</span></div>
+            <p style="text-align: justify">Lorem ipsum dolor sit amet, nunc turpis mattis vestibulum nulla mauris. Mauris eget egestas. Porta mattis orci, nec orci, lectus condimentum.</p>
+          </div>
+          <div class="card-action">
+            <a href="#!" class="btn waves-effect white black-text" style="margin:0;"><i class="fa fa-thumbs-up">3</i></a><a href="#!" class="btn waves-effect white black-text" style="margin:0; margin-left:15px;"><i class="mdi-content-reply"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+       <div class="col s12 m6 offset-m3">
+        <div class="card teal lighten-4">
+          <div class="card-content">
+            <div><img src="img/6.png" class="avatar circle" style="width:30px; height:30px; margin-right:10px; "><span class="badge cardbadge">RDFZ</span> replies to <img src="img/3.png" class="avatar circle" style="width:30px; height:30px; margin-right:10px; "><span class="badge cardbadge">BJHS</span></div>
+            <blockquote>
+              This is an example quotation that uses the blockquote tag.
+            </blockquote>
+            <p style="text-align: justify">Lorem ipsum dolor sit amet, nunc turpis mattis vestibulum nulla mauris. Mauris eget egestas. Porta mattis orci, nec orci, lectus condimentum.</p>
+          </div>
+          <div class="card-action">
+            <a href="#!" class="btn waves-effect white black-text" style="margin:0;"><i class="fa fa-thumbs-up">3</i></a><a href="#!" class="btn waves-effect white black-text" style="margin:0; margin-left:15px;"><i class="mdi-content-reply"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+       <div class="col s12 m6 offset-m3">
+        <div class="card" id="reply-form">
+          <div class="card-content">
+              <div class="row" style="margin-bottom: 0px;">
+                <div class="input-field col s12">
+                  <input id="reply" type="text" class="validate">
+                  <label for="reply">Reply</label>
+                </div>
+              </div>
+          </div>
+          <div class="card-action">
+            <button class="btn waves-effect waves-light nomargin" type="submit" name="action">Submit
+              <i class="mdi-content-send right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
-  <footer class="page-footer grey lighten-1">
+  <footer class="page-footer grey lighten-1" style="margin-top: 0px;">
     <div class="footer-copyright">
       <div class="container">
-      Copyright © 2014 Claryfy.com. All rights reserved.
+        Copyright © 2015 Claryfy.com
       </div>
     </div>
   </footer>
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery-2.1.3.min.js"></script>
   <script src="js/materialize.js"></script>
+  <script src="js/fastclick.js"></script>
   <script src="js/init.js"></script>
-
-  </body>
+  <script src="js/base.js"></script>
+</body>
 </html>

@@ -37,8 +37,38 @@
   height:56px;
 }
 
+#link-alias {
+  color: black;
+  text-transform: none;
+  margin-right: 0;
+}
+
 .nomargin {
   margin: 0 !important;
+}
+
+.smallbadge {
+  font-weight: 300;
+  font-size: 0.75rem !important;
+  background-color: rgb(97, 107, 103);
+  -webkit-border-radius: 2px;
+  color: white !important;
+  -moz-border-radius: 2px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  float: none !important;
+}
+
+.cardbadge {
+  font-weight: 300;
+  font-size: 0.75rem !important;
+  background-color: rgb(97, 107, 103);
+  -webkit-border-radius: 2px;
+  color: white !important;
+  -moz-border-radius: 2px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  float: none !important;
 }
 
 .schoolbadge {
@@ -111,6 +141,7 @@
 
 .title {
 	font-size:14px !important;
+  color: black !important;
 }
 
 .post-panel {
@@ -151,4 +182,14 @@
   margin-top:8px;
   width:37px;
   height:37px;
+}
+
+@media only screen and (min-width: 1024px)
+.desktop-top div{
+  margin-top: 60px;
+}
+
+.center {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
